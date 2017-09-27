@@ -1,0 +1,960 @@
+libdbd-pg-perl (3.7.0-1) unstable; urgency=medium
+
+  * New upstream version.
+
+ -- Christoph Berg <myon@debian.org>  Wed, 27 Sep 2017 18:26:17 +0200
+
+libdbd-pg-perl (3.6.2-2) unstable; urgency=medium
+
+  * Bump S-V to 4.0.
+
+ -- Christoph Berg <myon@debian.org>  Sat, 22 Jul 2017 17:46:48 +0200
+
+libdbd-pg-perl (3.6.2-1) experimental; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: change GitHub/CPAN URL(s) to HTTPS.
+
+  [ Martín Ferrari ]
+  * Remove myself from Uploaders.
+
+  [ gregor herrmann ]
+  * Remove Jonathan Yu from Uploaders. Thanks for your work!
+  * Remove Ryan Niebur from Uploaders. Thanks for your work!
+
+  [ Christoph Berg ]
+  * Import upstream version 3.6.2, compatible with PostgreSQL 10.
+  * Add myself and pkg-postgresql-public to Uploaders.
+  * Bump Standards-Version.
+
+ -- Christoph Berg <myon@debian.org>  Thu, 25 May 2017 12:47:22 +0200
+
+libdbd-pg-perl (3.5.3-1) unstable; urgency=medium
+
+  * Import upstream version 3.5.3
+  * Update Repository in debian/upstream/metadata.
+  * Rename autopkgtest configuration file.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 17 Oct 2015 21:44:16 +0200
+
+libdbd-pg-perl (3.5.1-1) unstable; urgency=medium
+
+  * Import upstream version 3.5.1.
+  * Refresh testdir.patch (offset).
+  * Update years of upstream and packaging copyright.
+  * Mark package as autopkgtest-able.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 28 Jun 2015 15:35:50 +0200
+
+libdbd-pg-perl (3.4.2-1) unstable; urgency=medium
+
+  * Imported upstream version 3.4.2
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 08 Oct 2014 22:13:16 +0200
+
+libdbd-pg-perl (3.4.1-2) unstable; urgency=high
+
+  * Team upload.
+  * Add Breaks: on older versions of request-tracker4, which
+    were incompatible with newer versions of libdbd-pg-perl
+    (see #757879)
+
+ -- Dominic Hargreaves <dom@earth.li>  Sat, 13 Sep 2014 18:22:36 +0100
+
+libdbd-pg-perl (3.4.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * Update Vcs-Browser URL to cgit web frontend
+  * Add debian/upstream/metadata
+  * Imported upstream version 3.4.1 (Closes: #761004)
+  * Refresh testdir.patch patch (offset)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Tue, 09 Sep 2014 21:22:42 +0200
+
+libdbd-pg-perl (3.3.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh testdir.patch (offset).
+  * Update years of upstream copyright.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 01 Jun 2014 15:20:54 +0200
+
+libdbd-pg-perl (3.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Simplify debian/rules a bit. initdb is found again by the test suite.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 21 May 2014 21:53:18 +0200
+
+libdbd-pg-perl (3.2.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 16 May 2014 17:28:36 +0200
+
+libdbd-pg-perl (3.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Strip trailing slash from metacpan URLs.
+  * debian/rules: re-enable tests which were skipped.
+    + Tell testsuite where initdb is.
+    + Run test as user that builds the package.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 13 Apr 2014 22:59:42 +0200
+
+libdbd-pg-perl (3.0.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Drop 2 patches (merged upstream), refresh the third one (offset).
+  * Update years of copyright.
+  * Bump versioned build dependency on libdbi-perl and add it to Depends
+    as well.
+  * Declare compliance with Debian Policy 3.9.5.
+  * Add note about changed UTF-8 handling to debian/NEWS.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 12 Feb 2014 19:34:12 +0100
+
+libdbd-pg-perl (2.19.3-2) unstable; urgency=low
+
+  * Team upload.
+  * Add 0001-Use-DEBUG1-for-the-PrintWarn-test-as-Postgres-got-le.patch patch.
+    Fix "FTBFS: Failed test 'DB handle attribute "PrintWarn" shows warnings
+    when on'". (Closes: #723928)
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Thu, 26 Sep 2013 21:04:11 +0200
+
+libdbd-pg-perl (2.19.3-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: update {versioned,alternative} (build) dependencies.
+
+  [ Xavier Guimard ]
+  * New upstream release
+  * Bump Standards-Version to 3.9.4
+  * Add myself to uploaders
+  * Bump debhelper compatibility to 9 to get hardening flags
+  * Update patches (offsets and format)
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+ -- Xavier Guimard <x.guimard@free.fr>  Sun, 19 May 2013 07:00:17 +0200
+
+libdbd-pg-perl (2.19.2-2) unstable; urgency=low
+
+  * debian/rules: Export LC_ALL=C to avoid build failure in non-English
+    locales. (Closes: #691727)
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Wed, 31 Oct 2012 08:26:18 +0100
+
+libdbd-pg-perl (2.19.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Fri, 16 Mar 2012 09:43:23 +0100
+
+libdbd-pg-perl (2.19.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ gregor herrmann ]
+  * Remove debian/source/local-options; abort-on-upstream-changes and
+    unapply-patches are default in dpkg-source since 1.16.1.
+
+  [ Salvatore Bonaccorso ]
+  * Imported Upstream version 2.19.0
+    + [SECURITY] CVE-2012-1151. Explicitly warn and croak with controlled
+      format strings. (Closes: #661536).
+  * Update debian/copyright information.
+    Update format to copyright-format 1.0 as released together with Debian
+    Policy 3.9.3.
+    Update copyright years for upstream files.
+  * Bump Debhelper compat level to 9.
+    Adjust Build-Depends on debhelper to (>= 9).
+  * Bump Standards-Version to 3.9.3
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Sat, 10 Mar 2012 10:16:46 +0100
+
+libdbd-pg-perl (2.18.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sat, 14 May 2011 11:00:50 +0200
+
+libdbd-pg-perl (2.18.0-1) unstable; urgency=low
+
+  * New upstream release.
+    + Fix memory leak when binding arrays. (Closes: #613493)
+  * Bump Standards-Version to 3.9.2 (no changes).
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Mon, 11 Apr 2011 16:24:42 +0200
+
+libdbd-pg-perl (2.17.2-1) unstable; urgency=low
+
+  * New upstream release.
+    + Supports dequoting of hex bytea format. (Closes: #598464)
+  * Use perl_dbi addon for dh.
+    * Bump build-dependency on libdbi-perl to >= 1.612.
+  * No longer set TEST_AUTHOR=1 in debian/rules when running tests. It is no
+    longer used by any test. Also remove build-dependencies on
+    libtest-pod-coverage-perl, libtest-pod-perl and libtest-yaml-meta-perl.
+  * debian/copyright: Refer to "Debian systems" instead of "Debian GNU/Linux
+    systems"; refer to /usr/share/common-licenses/GPL-1.
+  * Remove (build-)dep on perl (>= 5.10) | libversion-perl: stable already has
+    a recent enough version of perl.
+  * Make build-dependency on libpq-dev unversioned: the version in stable is
+    already more recent than 8.0.
+  * Add build-dependency on postgresql to enable tests. Note that the test
+    programs set up their own database cluster so this works even for
+    non-privileged users.
+    We have to create the test cluster in /tmp instead of the current
+    directory as otherwise the path to PostgreSQL's socket might be too long
+    to fit in the sockaddr_un struct (cf. #602891).
+    + new patch: testdir.patch
+  * Bump Standards-Version to 3.9.1.
+  * Update my email address.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sun, 21 Nov 2010 12:47:13 +0100
+
+libdbd-pg-perl (2.17.1-2) unstable; urgency=low
+
+  * Add dependency on perl-dbdapi-* (see #577209).
+    + Needs build-dep on libdbi-perl (>= 1.610.90+is+1.609-1~).
+  * debian/copyright: Minor changes for current DEP-5 proposal.
+  * Add myself to Uploaders.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sat, 24 Apr 2010 14:30:16 +0900
+
+libdbd-pg-perl (2.17.1-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Update copyright to new DEP5 format
+  * Standards-Version 3.8.4 (no changes)
+  * Refresh POD spelling patch
+
+  [ Krzysztof Krzyżaniak (eloy) ]
+  * New upstream release
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 08 Apr 2010 13:29:06 -0400
+
+libdbd-pg-perl (2.16.1-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+
+  [ gregor herrmann ]
+  * debian/copyright: update years of upstream and packaging copyright, add
+    info about third-party files.
+  * Add pod-spelling.patch.
+  * Source format 3.0 (quilt).
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Sun, 24 Jan 2010 13:19:14 -0500
+
+libdbd-pg-perl (2.16.0-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+  * Standards-Version 3.8.3 (drop perl version dep)
+
+  [ Ryan Niebur ]
+  * Update jawnsy's email address
+  * Update ryan52's email address
+
+  [ Raphaël Hertzog ]
+  * Remove myself from Uploaders.
+
+  [ gregor herrmann ]
+  * debian/control: Changed: (build-)depend on perl instead of
+    perl-modules.
+
+ -- Jonathan Yu <jawnsy@cpan.org>  Thu, 17 Dec 2009 10:50:43 -0500
+
+libdbd-pg-perl (2.15.1-1) unstable; urgency=low
+
+  [ Gunnar Wolf ]
+  * New (very minor) upstream release. Merging changelog entry with
+    Jonathan's, as previous version (2.15.0) has not been uploaded
+
+  [ Jonathan Yu ]
+  * New upstream release
+    + Use PQexecPrepared even with no placeholders (RT#48155)
+    + Allow execute_array and bind_param_array to take an odd number of items:
+      DBI will make the missing ones undef (RT#39829)
+    + Single quites around array literals when quoting arrays (RT#48420)
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 07 Aug 2009 23:57:04 -0500
+
+libdbd-pg-perl (2.14.1-1) unstable; urgency=low
+
+  [ Jonathan Yu ]
+  * New upstream release
+    + Remove invalid bigint assignment
+    + Make quoting of int, floats, and names much safer (RT#41565)
+    + Make quoting of geometric types respect all valid chars (RT#41565)
+    + Fix quoting of booleans to respect more Perlish variants (RT#41565)
+    + Fix backslash quoting of arrays (RT#46732)
+    + Fix error when destringifying an array starting with '[x:y]='
+    + Fix problem with foreign_key_info and NAME_uc (RT#46109)
+    + foreign_key_info now respects FetchHashKeyName (RT#46103)
+    + Makefile.PL applies POSTGRES_INCLUDE in a saner way (RT#45769)
+  * Added myself to Uploaders and Copyright
+  * Rewrote control description
+  * Changed over to short rules format, disable PerlCritic tests
+  * Add e-mail addresses for copyright holders
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+ -- Jonathan Yu <frequency@cpan.org>  Thu, 30 Jul 2009 19:58:55 -0400
+
+libdbd-pg-perl (2.13.1-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Thu, 23 Apr 2009 19:41:55 -0700
+
+libdbd-pg-perl (2.13.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Add myself to Uploaders
+  * reenable critic tests
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Tue, 14 Apr 2009 08:11:09 -0700
+
+libdbd-pg-perl (2.12.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/rules: turn off Perl::Critic tests for the time being, since they
+    fail at the moment. Bug forwarded upstream. Thanks to Daniel Schepler for
+    the bug report (closes: #521969).
+  * debian/copyright: update years.
+  * Set Standards-Version to 3.8.1 (no changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 31 Mar 2009 18:10:21 +0200
+
+libdbd-pg-perl (2.11.7-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 15 Dec 2008 20:20:37 +0100
+
+libdbd-pg-perl (2.11.6-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 04 Dec 2008 21:42:57 +0100
+
+libdbd-pg-perl (2.11.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: add ${misc:Depends} to Depends: field.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 30 Nov 2008 15:43:41 +0100
+
+libdbd-pg-perl (2.11.4-1) unstable; urgency=low
+
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+  * New upstream release.
+  * Bump versioned (build) dependecy on libdbi-perl to >= 1.52.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 22 Nov 2008 16:35:19 +0100
+
+libdbd-pg-perl (2.11.3-1) unstable; urgency=low
+
+  * New upstream release, includes a fix for "Segmentation fault on INSERT"
+    (closes: #500788).
+  * Re-enable pod tests.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 10 Nov 2008 00:02:41 +0100
+
+libdbd-pg-perl (2.10.7-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 24 Sep 2008 22:24:37 +0200
+
+libdbd-pg-perl (2.10.6-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Damyan Ivanov <dmn@debian.org>  Mon, 22 Sep 2008 23:01:27 +0300
+
+libdbd-pg-perl (2.10.3-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 06 Sep 2008 18:04:52 +0200
+
+libdbd-pg-perl (2.9.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Set debhelper compatibility level to 7; adapt
+    debian/{control,compat,rules}.
+  * debian/copyright: switch to new format.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 23 Aug 2008 14:22:40 -0300
+
+libdbd-pg-perl (2.9.0-1) unstable; urgency=low
+
+  * New upstream release
+    - Add support for database handle attribute "ReadOnly" allowing
+      enforcement of read only mode at the server level.
+    - Move PQexec structures to statement handle, to prevent excessive malloc
+      and free within execute function.
+    - Many documentation improvements.
+
+ -- Damyan Ivanov <dmn@debian.org>  Tue, 05 Aug 2008 00:13:42 +0300
+
+libdbd-pg-perl (2.8.7-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove lintian override, not needed any more.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 26 Jul 2008 17:46:53 +0200
+
+libdbd-pg-perl (2.8.6-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Tue, 22 Jul 2008 17:06:04 +0200
+
+libdbd-pg-perl (2.8.5-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 14 Jul 2008 21:09:35 +0200
+
+libdbd-pg-perl (2.8.4-1) unstable; urgency=low
+
+  * New upstream release, fixes the perl-critic test failures
+    (closes: #490321).
+  * Refresh lintian override.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 11 Jul 2008 15:58:06 +0200
+
+libdbd-pg-perl (2.8.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: replace "libversion-perl" with "perl-modules (>= 5.10) |
+    libversion-perl".
+  * debian/copyright: remove unneeded space before colon.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 30 Jun 2008 20:00:15 +0200
+
+libdbd-pg-perl (2.8.1-1) unstable; urgency=low
+
+  [ Martín Ferrari ]
+  * Updating my email address
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Set Standards-Version to 3.8.0 (no changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 14 Jun 2008 21:06:35 +0200
+
+libdbd-pg-perl (2.8.0-1) unstable; urgency=low
+
+  * New upstream release
+  * Added myself as an uploader
+
+ -- Gunnar Wolf <gwolf@debian.org>  Fri, 06 Jun 2008 12:55:26 -0500
+
+libdbd-pg-perl (2.7.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 15 May 2008 22:45:41 +0200
+
+libdbd-pg-perl (2.7.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Refresh lintian override.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 11 May 2008 14:32:37 +0200
+
+libdbd-pg-perl (2.6.6-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add build dependencies on libtest-pod-perl, libtest-pod-coverage-perl in
+    order to activate additional tests.
+
+ -- gregor herrmann <gregoa@debian.org>  Thu, 08 May 2008 21:26:44 +0200
+
+libdbd-pg-perl (2.6.4-1) unstable; urgency=low
+
+  * New upstream release.
+  * Add lintian override for manpage-has-errors-from-man where a line is too
+    long because of a URL.
+
+ -- gregor herrmann <gregoa@debian.org>  Mon, 05 May 2008 00:34:43 +0200
+
+libdbd-pg-perl (2.6.1-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control: change my email address.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 23 Apr 2008 17:45:09 +0200
+
+libdbd-pg-perl (2.6.0-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * New upstream release.
+  * Refresh debian/rules, no functional changes.
+
+  [ Martín Ferrari ]
+  * debian/rules: more refreshing and removing unneeded stuff.
+  * debian/control: adding myself to Uploaders.
+
+ -- Martín Ferrari <martin.ferrari@gmail.com>  Fri, 18 Apr 2008 12:56:59 -0300
+
+libdbd-pg-perl (2.5.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Tue, 08 Apr 2008 21:58:56 +0200
+
+libdbd-pg-perl (2.5.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * Remove empty debian/patches directory.
+  * debian/copyright: update according to upstream README.
+  * debian/rules:
+    - use DESTDIR and TMP for make install
+    - remove commented out dh_installexamples
+    - activate test suite (and add libtest-yaml-meta-perl,               
+      libperl-critic-perl to build dependencies)
+    - remove obsolete source and diff targets
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Thu, 27 Mar 2008 17:23:39 +0100
+
+libdbd-pg-perl (2.2.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: Use dist-based URL.
+  * debian/watch: Use better regex.
+
+ -- Roberto C. Sanchez <roberto@debian.org>  Sat, 15 Mar 2008 23:56:52 -0400
+
+libdbd-pg-perl (2.1.3-3) unstable; urgency=low
+
+  * Missing dependency from libversion-perl fixed. (closes: #467593)
+
+ -- Krzysztof Krzyżaniak (eloy) <eloy@debian.org>  Thu, 21 Feb 2008 15:45:07 +0100
+
+libdbd-pg-perl (2.1.3-2) unstable; urgency=low
+
+  * CPAN bug #29656 fixed in 2.0.0 version.  Closes: #436693
+
+ -- Krzysztof Krzyżaniak (eloy) <eloy@debian.org>  Thu, 21 Feb 2008 13:16:15 +0100
+
+libdbd-pg-perl (2.1.3-1) unstable; urgency=low
+
+  [ Krzysztof Krzyżaniak (eloy) ]
+  * New upstream release
+  * Added me as Uploaders
+  * debian/control: 
+   + Increase Standards-Version to 3.7.3
+  * debian/watch updated
+  
+  [ gregor herrmann ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza). Removed: XS-Vcs-Svn fields.
+  * Remove empty /usr/share/perl5 directory.
+  * Convert debian/copyright to UTF-8.
+  * debian/rules: delete /usr/share/perl5 only if it exists.
+
+ -- Krzysztof Krzyżaniak (eloy) <eloy@debian.org>  Thu, 21 Feb 2008 12:49:21 +0100
+
+libdbd-pg-perl (1.49-5) unstable; urgency=low
+
+  [ Raphael Hertzog ]
+  * Put the team as Maintainer and move myself to Uploaders.
+
+  [ Damyan Ivanov ]
+  * Promote Homepage to a real header
+  * debian/watch - version=3
+  * debian/rules:
+    + replace `pwd` with $(CURDIR), make with $(MAKE)
+    + Remove unused hand-crafted patch routines
+    + Remove unused dh_installdirs, dh_installmenu, dh_installcron, dh_link
+      and dh_installmanpages
+
+ -- Damyan Ivanov <dmn@debian.org>  Fri, 28 Sep 2007 22:38:27 +0300
+
+libdbd-pg-perl (1.49-4) unstable; urgency=low
+
+  * Re-swap Maintainer and Uploaders; Raphael wants to be listed as
+    maintainer.
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 11 Aug 2007 23:44:49 -0400
+
+libdbd-pg-perl (1.49-3) unstable; urgency=low
+
+  [ Raphael Hertzog ]
+  * Improved description. Closes: #406450
+
+  [ Joey Hess ]
+  * Maintainer and Uploaders seemed to be reversed/mixed up, swap.
+  * Add self to uploaders.
+  * Update to debhelper v5; use debian/compat.
+  * Don't ignore make realclean errors.
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 11 Aug 2007 21:57:24 -0400
+
+libdbd-pg-perl (1.49-2) unstable; urgency=high
+
+  * Documented in NEWS.Debian the required changes to scripts due to the use
+    of server side placeholders. Closes: #315708
+  * Now other changes apart from that, so it's safe for etch. Thus
+    urgency=high.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Thu, 25 May 2006 22:10:34 +0000
+
+libdbd-pg-perl (1.49-1) unstable; urgency=low
+
+  * New upstream release.
+  * Depends on libdbi-perl (>= 1.45) now.
+  * Updated Standards-Version to 3.7.2.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Thu, 25 May 2006 21:59:54 +0000
+
+libdbd-pg-perl (1.45-2) unstable; urgency=low
+
+  * Remove build dependency on postgresql-client-8.0. It's no longer needed
+    since pg_config is available via libpq-dev. 
+    Closes: #361858
+  * Added pkg-perl team in the Uploaders field.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Thu, 13 Apr 2006 23:42:24 +0200
+
+libdbd-pg-perl (1.45-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sun, 12 Mar 2006 18:10:03 +0100
+
+libdbd-pg-perl (1.43-2) unstable; urgency=low
+
+  * Remove README.Debian since libpq4 works with all versions of
+    PostgreSQL and thus this module too.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Fri, 12 Aug 2005 13:52:18 +0200
+
+libdbd-pg-perl (1.43-1) unstable; urgency=low
+
+  * New upstream release.
+  * Document in README.Debian the fact that the module is intended to work
+    with PostgreSQL 8.0 or newer. Closes: #315708
+
+ -- Raphael Hertzog <hertzog@debian.org>  Fri, 12 Aug 2005 12:24:18 +0200
+
+libdbd-pg-perl (1.42-2) unstable; urgency=low
+
+  * Adapted for postgresql-8.0.
+  * Build-depends on libpq-dev (>= 8.0)
+  * Upgraded Standards-Version to 3.6.2.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Wed, 22 Jun 2005 14:56:06 +0200
+
+libdbd-pg-perl (1.42-1) unstable; urgency=low
+
+  * New upstream version.
+  * Remove patch for memory leak, it has been integrated upstream.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Wed, 25 May 2005 07:16:29 +0000
+
+libdbd-pg-perl (1.41-3) unstable; urgency=medium
+
+  * Oops, I forgot to register the patch in the debian_patches variable.
+    This time the problem is fixed.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Wed,  4 May 2005 15:29:07 +0200
+
+libdbd-pg-perl (1.41-2) unstable; urgency=medium
+
+  * Include a patch fixing a memory leak. Closes: #305468
+    This patch has already been integrated upstream but there's
+    no new release yet.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Wed,  4 May 2005 15:21:03 +0200
+
+libdbd-pg-perl (1.41-1) unstable; urgency=low
+
+  * New upstream release.
+  * Depends on libdbi-perl (>= 1.38).
+
+ -- Raphael Hertzog <hertzog@debian.org>  Fri, 15 Apr 2005 09:32:02 +0200
+
+libdbd-pg-perl (1.32-2) unstable; urgency=low
+
+  * Depends on libdbi-perl (>= 1.35). Closes: #243703
+  * Built with PostgreSQL 7.4. Corrected Build-Depends accordingly.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sun, 27 Jun 2004 21:25:37 +0000
+
+libdbd-pg-perl (1.32-1) unstable; urgency=low
+
+  * New upstream release.  Closes: #235350
+  * Remove fix-memleak patch (applied upstream)
+  * Remove quote patch (applied upstream)
+  * New co-maintainer
+
+ -- Ivan Kohler <ivan-debian@420.am>  Tue,  9 Mar 2004 22:44:34 -0800
+
+libdbd-pg-perl (1.31-2) unstable; urgency=low
+
+  * New patch: quote.dpatch
+    Change quote character from \" to ". Closes: #223398
+
+ -- Raphael Hertzog <hertzog@debian.org>  Tue,  9 Dec 2003 17:02:45 +0000
+
+libdbd-pg-perl (1.31-1) unstable; urgency=low
+
+  * New upstream version. Closes: #221743
+  * Integrated patch to fix mem leak in debian/patches this time.
+    cf #167148
+  * Removed patch fixing version comparison since it has been fixed upstream.
+    Removed patch removing spurious reference to Oracle too.
+  * Added postgresql-client to the Build-Depends because of
+    pg_config/pg_wrapper.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Mon,  8 Dec 2003 12:51:05 +0000
+
+libdbd-pg-perl (1.22-3) unstable; urgency=low
+
+  * Remove spurious reference to Oracle. Closes: #208556
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sat,  6 Sep 2003 09:57:23 +0000
+
+libdbd-pg-perl (1.22-2) unstable; urgency=low
+
+  * Fix PG version comparison in several places.
+    Closes: #198552
+  * Updated standards-version.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sat, 12 Jul 2003 14:32:41 +0000
+
+libdbd-pg-perl (1.22-1) unstable; urgency=low
+
+  * New upstream release. Closes: #187436
+  * Updated section to "perl".
+
+ -- Raphael Hertzog <hertzog@debian.org>  Tue,  8 Apr 2003 22:49:52 +0000
+
+libdbd-pg-perl (1.20-2) unstable; urgency=low
+
+  * Build-Depends on postgresql-dev (>= 7.3.1) to make sure the generated
+    dependencies are "libpq3" and no more "libpgsql2". Closes: #174878
+
+ -- Raphael Hertzog <hertzog@debian.org>  Wed,  1 Jan 2003 16:34:36 +0100
+
+libdbd-pg-perl (1.20-1) unstable; urgency=low
+
+  * New upstream version. Closes: #172644
+  * No answer from upstream, so I'm applying Dan's patch. We'll see if
+    anything break. Closes: #167148
+  * Updated the download URL in the copyright notice.
+  * Now build depends on debhelper >= 4, updated DH_COMPAT accordingly.
+  * Originally built with Postgresql 7.3 (but it's not enforced by
+    Build-Depends).
+
+ -- Raphael Hertzog <hertzog@debian.org>  Wed, 11 Dec 2002 19:29:25 +0100
+
+libdbd-pg-perl (1.13-4) unstable; urgency=low
+
+  * Updated the copyright notice. Closes: #157567
+
+ -- Raphael Hertzog <hertzog@debian.org>  Mon, 26 Aug 2002 12:22:33 +0200
+
+libdbd-pg-perl (1.13-3) unstable; urgency=low
+
+  * Recompile with perl 5.8.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Wed, 31 Jul 2002 20:35:10 +0200
+
+libdbd-pg-perl (1.13-2) unstable; urgency=low
+
+  * Try another patch for #146794.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Fri, 17 May 2002 16:31:33 +0200
+
+libdbd-pg-perl (1.13-1) unstable; urgency=low
+
+  * New upstream version.
+  * Added a debian/watch file.
+  * Apply patches for binary data support. Closes: #146794
+
+ -- Raphael Hertzog <hertzog@debian.org>  Thu, 16 May 2002 15:14:03 +0200
+
+libdbd-pg-perl (1.01-3) unstable; urgency=medium
+
+  * Moved to main. Closes: #140435
+
+ -- Raphael Hertzog <hertzog@debian.org>  Fri, 29 Mar 2002 13:10:59 +0100
+
+libdbd-pg-perl (1.01-2) unstable; urgency=low
+
+  * Recompile for Postregsql 7.2. Closes: #136430
+  * Updated Build-Depends accordingly.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sat,  2 Mar 2002 13:12:08 +0100
+
+libdbd-pg-perl (1.01-1) unstable; urgency=medium
+
+  * New upstream version. Closes: #102223
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sun,  8 Jul 2001 17:42:07 +0200
+
+libdbd-pg-perl (0.98-2) unstable; urgency=medium
+
+  * Move to non-us. Closes: #97115
+  * Full source upload because of this.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sat, 19 May 2001 14:13:50 +0200
+
+libdbd-pg-perl (0.98-1) unstable; urgency=medium
+
+  * New upstream version. Closes: #96246
+  * I don't have any segfault with this version. Closes: #96298
+    Instead I have the error "no state" when calling fetchrow.
+  * Build-Depends on postgresql-dev (>= 7.1release-4) to be sure
+    that it will be built with a fixed libpgsql2.1 (cf #96460).
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sat,  5 May 2001 21:32:53 +0200
+
+libdbd-pg-perl (0.97-1) unstable; urgency=medium
+
+  * New upstream version. Closes: #94768
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sun, 22 Apr 2001 16:07:21 +0200
+
+libdbd-pg-perl (0.95-5) unstable; urgency=medium
+
+  * Updated Build-Depends so that it requires libdbi-perl but >= 1.14-2.
+    Closes: #94167
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sat, 21 Apr 2001 12:49:17 +0200
+
+libdbd-pg-perl (0.95-4) unstable; urgency=medium
+
+  * Applied patch fixing a bug related to BLOB handling. Closes: #88537
+  * This patch has been submitted upstream by the submitter itself.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Tue,  6 Mar 2001 00:01:30 +0100
+
+libdbd-pg-perl (0.95-3) unstable; urgency=medium
+
+  * Updated for the latest perl policy which brings back perl to its
+    "perl" package.
+  * Complies with policy 3.5.2.
+  * Uses the latest PostgreSQL. Closes: #86529
+
+ -- Raphael Hertzog <hertzog@debian.org>  Wed, 21 Feb 2001 22:24:33 +0100
+
+libdbd-pg-perl (0.95-2) unstable; urgency=low
+
+  * Simple recompile for perl-5.6. Closes: #77136 
+
+ -- Raphael Hertzog <hertzog@debian.org>  Thu, 16 Nov 2000 09:14:02 +0100
+
+libdbd-pg-perl (0.95-1) unstable; urgency=low
+
+  * New upstream version. Closes: #72507
+  * Updated to latest policy.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Thu, 12 Oct 2000 13:20:51 +0200
+
+libdbd-pg-perl (0.93-3) unstable; urgency=low
+
+  * Simple recompile for woody with correct dependency for
+    PostgreSQL 7. Closes: #64112, #63429
+
+ -- Raphael Hertzog <hertzog@debian.org>  Mon, 15 May 2000 00:04:05 +0200
+
+libdbd-pg-perl (0.93-2) frozen unstable; urgency=low
+
+  * This version needs to go to frozen since it will enable a smoother
+    upgrade from potato to woody.
+  * Now depends on libpgsql2 (<< 7.0) so that when someone will install
+    postgresql 7, the dependencies won't be met and they'll have to
+    upgrade to the woody version. Closes: #61378
+
+ -- Raphael Hertzog <hertzog@debian.org>  Sat,  1 Apr 2000 15:43:34 +0200
+
+libdbd-pg-perl (0.93-1) unstable; urgency=low
+
+  * New upstream version.
+  * Applied patch for good escaping with pg_auto_escape. Closes: #52833
+  * Policy 3.1.1 compliance.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Mon, 27 Dec 1999 16:27:40 +0100
+
+libdbd-pg-perl (0.92-1) unstable; urgency=low
+
+  * New maintainer.
+  * New upstream version.
+  * Policy 3.0.1 compliance.
+  * Closing "fixed" bugs : closes: #41819, #41432, #39918, #43315
+  * Converted to debhelper 2.
+
+ -- Raphael Hertzog <hertzog@debian.org>  Mon, 13 Sep 1999 23:06:12 +0200
+
+libdbd-pg-perl (0.89-1.1) unstable; urgency=low
+
+  * NMU for the perl upgrade. Closes: #41819, #41432
+  * Corrected the rules files to conform to perl policy 1.0.1
+  * Compiled with perl-5.005.
+  * Compiled with the latest postgresql (6.5.1-1) and
+    corrected the dependency. Closes: #39918
+  * Upgraded standards-version to 3.0.0. Uses the new debstd.
+  * Added an extended description.
+
+ -- Raphael Hertzog <rhertzog@hrnet.fr>  Sat, 24 Jul 1999 18:12:40 +0200
+
+libdbd-pg-perl (0.89-1) unstable; urgency=low
+
+  * built against postgresql-6.4
+  * New upstream release
+
+ -- Tom Lear <tom@trap.mtview.ca.us>  Thu, 31 Dec 1998 13:12:29 -0800
+
+libdbd-pg-perl (0.73-4) frozen unstable; urgency=low
+
+  * removed i386-centricity - closes #28898
+
+ -- Tom Lear <tom@trap.mtview.ca.us>  Tue,  3 Nov 1998 05:41:54 -0800
+
+libdbd-pg-perl (0.73-3) unstable; urgency=low
+
+  * depends on libdbi-perl (>=1.02) - closes #27145
+  * fixed description - closes #27727
+
+ -- Tom Lear <tom@trap.mountain-view.ca.us>  Wed, 14 Oct 1998 17:33:22 -0700
+
+libdbd-pg-perl (0.73-2) unstable; urgency=low
+
+  * Non-maintainer release of the non-maintainer release.  Doh
+  * Recompiled against current DBI driver.
+  * Removed perllocal.pod and .packlist files
+  * Stripped binaries
+
+ -- Martin Schulze <joey@kuolema.infodrom.north.de>  Fri, 25 Sep 1998 11:31:07 +0200
+
+libdbd-pg-perl (0.73-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- Tom Lear <tom@trap.mountain-view.ca.us>  Sun,  2 Aug 1998 17:27:26 -0700
+

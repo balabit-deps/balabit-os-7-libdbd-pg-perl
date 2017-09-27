@@ -1,0 +1,33 @@
+libdbd-pg-perl (3.0.0-1) unstable; urgency=medium
+
+  From upstream Changes:  
+  - Major change in UTF-8 handling. If client_encoding is set to UTF-8, 
+    always mark returned Perl strings as utf8. See the pg_enable_utf8 docs
+    for more information.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 12 Feb 2014 19:32:53 +0100
+
+libdbd-pg-perl (1.42-1) unstable; urgency=low
+
+  DBD::Pg changed its behaviour concerning the use of placeholders. It
+  implements now server side placeholders, this is more efficient but has the
+  drawback of being more strict in the syntax of placeholder as it must
+  match what PostgreSQL will accept.
+
+  Here are some examples of things which used to be accepted and which aren't
+  any more (you can easily extrapolate for other types):
+  SELECT ... WHERE pdate > now() - interval ?
+  SELECT inet ?
+  The correct queries are:
+  SELECT ... WHERE pdate > now() - ?::interval
+  SELECT ?::inet
+
+  If you don't want to replace the queries, a simple work around is to disable
+  the server side queries with:
+  $dbh->{pg_server_prepare} = 0;
+
+  Some useful links can be found in the bug report #315708:
+  http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=315708;msg=86
+
+ -- Raphael Hertzog <hertzog@debian.org>  Mon, 13 Nov 2006 22:05:02 +0100
+

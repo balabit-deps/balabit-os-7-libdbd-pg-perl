@@ -1,0 +1,28 @@
+Description: Create test database in /tmp
+ Building the package with sbuild may result in the path to the socket used by
+ PostgreSQL to be too long to fit in the sockaddr_un struct defined in
+ /usr/include/linux/un.h.  For this reason we move the test cluster to a
+ directory in /tmp.
+ .
+ See also <http://bugs.debian.org/602891>.
+Origin: vendor
+Forwarded: not-needed
+Author: Ansgar Burchardt <ansgar@debian.org>
+Date: Sun, 21 Nov 2010 12:37:21 +0100
+Reviewed-By: Xavier Guimard <x.guimard@free.fr>
+Last-Update: 2015-06-28
+
+--- a/t/dbdpg_test_setup.pl
++++ b/t/dbdpg_test_setup.pl
+@@ -783,8 +783,9 @@
+ 	}
+ 
+ 	if (!$testdir) {
+-		my $dir = getcwd();
+-		$testdir = "$dir/dbdpg_test_database";
++		# my $dir = getcwd();
++		# $testdir = "$dir/dbdpg_test_database";
++		$testdir = find_tempdir();
+ 	}
+ 
+ 	## Allow forcing of ENV variables

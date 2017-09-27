@@ -1,0 +1,4 @@
+# fails with
+# Global symbol "$VERSION" requires explicit package name ...
+# but quite unhelpful anyway
+Bundle/DBD/Pg.pm

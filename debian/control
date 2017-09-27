@@ -1,0 +1,34 @@
+Source: libdbd-pg-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Ivan Kohler <ivan-debian@420.am>,
+           Damyan Ivanov <dmn@debian.org>,
+           Krzysztof Krzyżaniak (eloy) <eloy@debian.org>,
+           gregor herrmann <gregoa@debian.org>,
+           Ansgar Burchardt <ansgar@debian.org>,
+           Xavier Guimard <x.guimard@free.fr>,
+           Christoph Berg <myon@debian.org>,
+           Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: perl,
+               debhelper (>= 9.20120312),
+               libdbi-perl (>= 1.614),
+               libpq-dev,
+               postgresql
+Standards-Version: 4.1.0
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libdbd-pg-perl.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-perl/packages/libdbd-pg-perl.git
+Homepage: https://metacpan.org/release/DBD-Pg
+
+Package: libdbd-pg-perl
+Architecture: any
+Depends: ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+         libdbi-perl (>= 1.614)
+Breaks: request-tracker4 (<< 4.2.7)
+Description: Perl DBI driver for the PostgreSQL database server
+ DBD::Pg is a Perl DBI Database Driver module that works with the DBI module to
+ provide access to PostgreSQL databases. It enables you to control a PostgreSQL
+ database in a Perl script.

@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+PG_INCLUDEDIR = $(shell pg_config --includedir)
+PG_LIBDIR = $(shell pg_config --libdir)
+
+export POSTGRES_INCLUDE=$(PG_INCLUDEDIR)
+export POSTGRES_LIB=$(PG_LIBDIR)
+export LC_ALL=C
+
+%:
+	dh $@ --with perl_dbi
+
+override_dh_auto_test:
+	USER=$(shell whoami) dh_auto_test

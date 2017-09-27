@@ -1,0 +1,7 @@
+---
+Archive: CPAN
+Bug-Database: https://rt.cpan.org/Public/Dist/Display.html?Name=DBD-Pg
+Contact: Greg Sabino Mullane <greg@turnstep.com>
+Homepage: http://search.cpan.org/dist/DBD-Pg/
+Name: DBD-Pg
+Repository: https://github.com/bucardo/dbdpg
